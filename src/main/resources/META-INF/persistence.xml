@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.2"
+	xmlns="http://xmlns.jcp.org/xml/ns/persistence"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence
+     http://xmlns.jcp.org/xml/ns/persistence/persistence_2_2.xsd">
+
+	<!-- Định nghĩa đơn vị persistence -->
+	<persistence-unit name="asmjava4">
+	
+		<properties>
+			<!-- Driver JDBC cho SQL Server -->
+			<property name="javax.persistence.jdbc.driver"
+				value="com.microsoft.sqlserver.jdbc.SQLServerDriver" />
+			
+			<!-- URL kết nối đến cơ sở dữ liệu -->
+			<property name="javax.persistence.jdbc.url"
+				value="jdbc:sqlserver://BUIHOANGAN:1433;database=asmJava4" />
+			
+			<!-- Tên người dùng để đăng nhập -->
+			<property name="javax.persistence.jdbc.user" value="sa" />
+			
+			<!-- Mật khẩu của người dùng -->
+			<property name="javax.persistence.jdbc.password" value="songlong"/>
+			
+			<!-- Cấu hình hiển thị các câu lệnh SQL -->
+			<property name="hibernate.show_sql" value="true"/>
+			
+			<!-- Cấu hình định dạng các câu lệnh SQL -->
+			<property name="hibernate.format_sql" value="true" />
+		</properties>
+	</persistence-unit>
+</persistence>
